@@ -13,4 +13,22 @@ window.onload = () => {
                 }
             })
     }
+
+    document.getElementById("btnEnviarAlumno").onclick=()=>{
+        let url = location.origin + "/api/alumno";
+        fetch(url,{
+            method:'POST',
+            headers:{
+                'Content-Type': 'application/json' // Especifica el tipo de contenido como JSON
+            },
+            body: JSON.stringify(alumno)
+        })
+            .then(datos=>datos.json())
+            .then(datos=>{
+                console.log(datos);
+            })
+            .catch(err=>{
+                console.log(err);
+            })
+    }
 }
