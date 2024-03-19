@@ -2,9 +2,11 @@ window.onload = () => {
     document.getElementById("btnPedirDatos").onclick = () => {
         let url = location.href + "api/pedirdatos";
         fetch(url)
-            .then(datos => datos.text())
+            .then(datos => datos.json())
             .then(datos => {
-                console.log(datos);
+                for (let i = 0; i < datos.length; i++) {
+                    console.log(datos[i]);
+                }
             })
     }
 }
