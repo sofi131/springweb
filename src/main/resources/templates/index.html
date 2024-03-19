@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
 </head>
 <body>
 <img src="img/imagen1.jpg" alt="">
 <h1>Pagina Index</h1>
 
 <p th:text="'Hola '+${name}"></p>
-
+<!-- formulario -->
 <form action="" method="post">
     <input type="text" name="nombre" id="" placeholder="nombre">
     <input type="password" name="password" id="" placeholder="password">
     <input type="submit" value="Enviar">
 </form>
+<!-- mensaje de si te logueas correcta o incorrectamente -->
 <div th:if="${msg}">
     <p>Usuario o Contraseña incorrecto</p>
 </div>
+<!-- botón -->
+<button id="btnPedirDatos">Pedir datos</button>
 </body>
 </html>
