@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<h1>Página index</h1>
+<h1>Pagina Index</h1>
 
 <p th:text="'Hola '+${name}"></p>
 
-<form action="" method="post"></form>
-<input type="text" name="nombre" id="" placeholder="nombre">
-<input type="password" name="password" id="" placeholder="password">
-<input type="submit" value="Enviar">
+<form action="" method="post">
+    <input type="text" name="nombre" id="" placeholder="nombre">
+    <input type="password" name="password" id="" placeholder="password">
+    <input type="submit" value="Enviar">
 </form>
+<div th:if="${msg}">
+    <p>Usuario o Contraseña incorrecto</p>
+</div>
 </body>
 </html>
