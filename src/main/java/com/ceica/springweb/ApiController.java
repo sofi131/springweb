@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api") //peticiones en barra api las gestiona esta clase
 public class ApiController {
 
-    @GetMapping("/hello")
+    @GetMapping("/pedirdatos")
     public String prueba(){
         return "hola mundo";
     }
