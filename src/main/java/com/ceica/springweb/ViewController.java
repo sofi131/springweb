@@ -2,10 +2,9 @@ package com.ceica.springweb;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Date;
 
 @Controller
 public class ViewController {
@@ -24,5 +23,12 @@ public class ViewController {
             model.addAttribute("msg","Usuario o Contraseña incorrecta");
             return "index";
         }
+    }
+    //crear tarea
+    @PostMapping("/tarea")
+    public String crearTarea(@ModelAttribute Tarea tarea){
+        System.out.println(tarea);
+    //model.addAttribute("msg", "Tarea creada exitosamente");
+    return "index";
     }
 }
