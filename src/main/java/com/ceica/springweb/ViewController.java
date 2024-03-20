@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class ViewController { //así le decimos que es un controller (html) si fuera rest datos(string cadena de texto)
+public class ViewController {
     @GetMapping("/")
     public String index(Model model) {
         String nombre="Tomas";
@@ -26,4 +26,3 @@ public class ViewController { //así le decimos que es un controller (html) si f
         }
     }
 }
-
